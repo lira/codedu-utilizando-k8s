@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webserver-go
+spec:
+  selector:
+    matchLabels:
+      app: webserver-go
+  template:
+    metadata:
+      labels:
+        app: webserver-go
+    spec:
+      containers:
+      - name: webserver-go
+        image: lira/webserver-go
+        ports:
+        - containerPort: 8000

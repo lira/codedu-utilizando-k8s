@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: desafio-nginx-conf
+data:
+  nginx.conf: |
+    server {
+      listen 80;
+      index index.html;
+      root /usr/share/nginx/html;
+    }
+  index.html: |
+    <html>
+      <head>
+        <title>Desafio Code Education</title>
+      </head>
+      <body>
+        <h1>Code.education Rocks</h1>
+      </body>
+    </html>
